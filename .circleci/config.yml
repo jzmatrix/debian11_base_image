@@ -22,7 +22,7 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            TS=`cat /tmp/timestamp`
+            TS=`date +%Y%m%d_%H%M`
             echo $TS
             ##
             docker build --cache-from=app  -t ${IMAGE_REPO}/${IMAGE_NAME}:$TS -t ${IMAGE_REPO}/${IMAGE_NAME}:latest .
