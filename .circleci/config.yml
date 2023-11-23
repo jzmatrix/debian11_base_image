@@ -11,7 +11,7 @@ jobs:
   build:
     working_directory: /app
     docker:
-      - image: docker:18.06.3-ce-git
+      - image: docker:24.0.7-dind
     steps:
       - checkout
       - setup_remote_docker
